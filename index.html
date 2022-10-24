@@ -12,27 +12,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
-
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
+  <main class="card">
+    <div class="card_musico">
+    </div>
+    <h1 class="card_title">Order Summary</h1>
+    <p class="card_text">You can now listen to millions of songs, audiobooks, and podcasts on any 
+      device anywhere you like!
+    </p> 
+    <div class="card_plan">
+      <img src="./images/icon-music.svg" alt="Icon music" class="icon__music">
+        <div class="plan">
+          <h2 class="plan_titulo">Annual Plan</h2>
+          <h3 class="plan_precio">$59.99/year</h3>
+        </div> 
+        <a href="#" class="card_change">Change</a>
+    </div>
+    <button class="card_cta_payment">Proceed to Payment</button>
+    <a href="#" class="card_cancel">Cancel Order</a>
+    <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    Coded by <a href="#">Javier Camilo Mesa Novoa</a>.
+    </div>
+  </main>
+  </body>
 </html>

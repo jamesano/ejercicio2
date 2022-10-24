@@ -1,5 +1,140 @@
-body{
-    font-family: 'Red Hat Display', sans-serif;
+:root{
+    --color-Pale-blue: hsl(225, 100%, 94%);
+    --color-Bright-blue: hsl(245, 75%, 52%);
+    --color-Very-pale-blue: hsl(225, 100%, 98%);
+    --color-Desaturated-blue: hsl(224, 23%, 55%);
+    --color-Dark-blue: hsl(223, 47%, 23%);
 }
-.attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+  background-color: var(--color-Pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  margin: 0;
+}
+body::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 30vh;
+}
+.card{
+    background-color: white;
+    border-radius: 1em;
+    margin: 20px;
+    max-width: 375px;
+    z-index: 1;
+    box-shadow: 0 10px #dce3ff;   
+}
+.card_musico{
+    min-height: 15vh;
+    background-image: url(../images/illustration-hero.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1em 1em 0 0;
+}
+.card_title{
+    font-weight: 950;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 1.5em;
+}
+.card_text{
+    text-align: center;
+    margin: auto;
+    color: var(--color-Desaturated-blue);
+    font-size: .9em;
+    padding: 0 2em;
+    line-height: 1.7;
+}
+.card_plan{
+    background-color: var(--color-Very-pale-blue);
+    border-radius: .5em;
+    padding: 1em 1em;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5em;
+    margin: 4em 2em;
+}
+.plan>* {
+    margin: 0;
+  }
+.plan_titulo {
+    font-size: .9em;
+    color: var(--color-Dark-blue);
+}
+.plan_precio {
+    color: var(--color-Desaturated-blue);
+}
+.card_change{
+    align-self: center;
+    font-size: 0.8em;
+    margin-left: 1em;
+    color: var(--color-Bright-blue);
+    font-weight: bold;
+    cursor: pointer;
+}
+.card_change:hover {
+    text-decoration: none;
+}
+.card_cta_payment {
+    display: block;
+    margin: auto;
+    background-color: var(--color-Bright-blue);
+    color: white;
+    padding: 1em 5.4em;
+    border-radius: .7em;
+    outline: 0;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+.card_cta_payment:hover {
+    background-color: #7699ff;
+}
+.card_cancel {
+    display: block;
+    text-align: center;
+    margin: 2em 0 2.5em 0;
+    color:var(--color-Desaturated-blue);
+    text-decoration: none;
+    cursor: pointer;
+}
+.card_cancel:hover {
+    color: rgb(1, 1, 42);
+}
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+@media (min-width: 700px) {
+    .card_change {
+      margin-left: 3em;
+    }
+  
+    .card_musico {
+      min-height: 20vh;
+    }
+}
